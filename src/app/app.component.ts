@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app',
-  template: `<router-outlet></router-outlet>`
+  selector: 'app',  
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
   title = 'lacus';

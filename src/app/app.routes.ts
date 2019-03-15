@@ -1,22 +1,18 @@
+import { LoginComponent } from './login/login.component';
 import {RouterModule, Routes} from "@angular/router";
-import {NgModule} from "@angular/core";
+import { NgModule } from '@angular/core';
 
 import {HomeComponent} from "./home/home.component";
+import { AdminComponent } from './admin/admin.component';
 
 //import {HomeResolver} from "./services/main.service";
 
-
-const children = [
-    {path: '', component: HomeComponent},
-    
-  ];
-
   const routes: Routes = [
   
-    {
-      path: '',
-      children: [...children]
-    }
+    {path: '' , component: LoginComponent},
+    {path: 'home', component: HomeComponent},
+    {path: 'admin', component: AdminComponent}
+    
    
   ];
   @NgModule({
@@ -24,5 +20,5 @@ const children = [
     exports: [RouterModule],
   })
   export class AppRoutes {
-  }
+  } 
   
